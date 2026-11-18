@@ -2,6 +2,10 @@
 
 Notion을 CMS로 사용하는 AI 개발 가이드 포탈 (Next.js 15 + TypeScript + Tailwind CSS + shadcn/ui).
 
+# Project Context
+- PRD 문서: @docs/PRD.md
+- 개발 로드맵: @docs/ROADMAP.md
+
 ## 규칙
 - Notion API 호출은 `src/lib/notion` 에서만 한다. 페이지/컴포넌트에서 직접 호출 금지
 - `NOTION_API_KEY` 는 서버 전용. `NEXT_PUBLIC_` 접두사 금지, 코드·문서에 값 하드코딩 금지
