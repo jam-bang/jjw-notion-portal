@@ -20,6 +20,19 @@
         "@playwright/mcp@latest"
       ],
       "env": {}
+    },
+    "shrimp-task-manager": {
+      "type": "stdio",
+      "command": "npx",
+      "args": [
+        "-y",
+        "mcp-shrimp-task-manager"
+      ],
+      "env": {
+        "DATA_DIR": "C:\\Users\\Metanet\\workspace\\jjw\\jjw-notion-portal\\shrimp_data",
+        "TEMPLATES_USE": "en",
+        "ENABLE_GUI": "false"
+      }
     }
   }
 }
