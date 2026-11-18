@@ -15,11 +15,11 @@
 
 ## Phase 1: 프로젝트 초기 설정 (골격) — 1일
 ### 작업
-- [ ] Starter Kit에서 넘어온 Spring Boot 소스(`src/main`, `build.gradle`, gradle wrapper, `docker-compose.yml`) 정리
-- [ ] Next.js 15 (App Router, TypeScript, ESLint, `src/` 디렉터리) 생성
-- [ ] Tailwind CSS, shadcn/ui 기본 설정(`components.json`, `cn()` 유틸), Lucide React 설치
-- [ ] 루트 레이아웃(Header·Footer 자리), 폴더 구조(`app/`, `components/`, `lib/`, `types/`)
-- [ ] `.env.example`(`NOTION_API_KEY`, `NOTION_DATABASE_ID`), `.gitignore` 정리
+- [x] Starter Kit에서 넘어온 Spring Boot 소스(`src/main`, `build.gradle`, gradle wrapper, `docker-compose.yml`) 정리
+- [x] Next.js 15 (App Router, TypeScript, ESLint, `src/` 디렉터리) 생성
+- [x] Tailwind CSS, shadcn/ui 기본 설정(`components.json`, `cn()` 유틸), Lucide React 설치
+- [x] 루트 레이아웃(Header·Footer 자리), 폴더 구조(`app/`, `components/`, `lib/`, `types/`)
+- [x] `.env.example`(`NOTION_API_KEY`, `NOTION_DATABASE_ID`), `.gitignore` 정리
 
 ### 왜 먼저인가
 폴더 구조·스타일 체계·환경 변수 규칙이 정해져 있어야 이후 모든 모듈이 같은 자리에 같은 방식으로 만들어진다.
@@ -30,13 +30,13 @@
 
 ## Phase 2: 공통 모듈/컴포넌트 — 1~2일
 ### 작업
-- [ ] 공통 타입: `Guide`, `GuideCategory`, `GuideLevel` (`src/types/guide.ts`)
-- [ ] Notion 공통 모듈 `src/lib/notion/`
+- [x] 공통 타입: `Guide`, `GuideCategory`, `GuideLevel` (`src/types/guide.ts`)
+- [x] Notion 공통 모듈 `src/lib/notion/`
   - `client.ts` (서버 전용 클라이언트), `mapper.ts` (Notion 속성 → `Guide`)
   - `getGuides()`, `getGuideBySlug()`, `getGuideContent()` (블록 → 마크다운)
   - Status가 select/status 어느 타입이어도 `발행됨`만 반환
-- [ ] 공통 UI: `GuideCard`, `CategoryBadge`, `LevelBadge`, `EmptyState`, shadcn/ui `Card`·`Badge`·`Input`
-- [ ] Header 내비게이션(홈·가이드·카테고리)
+- [x] 공통 UI: `GuideCard`, `CategoryBadge`, `LevelBadge`, `EmptyState`, shadcn/ui `Card`·`Badge`·`Input`
+- [x] Header 내비게이션(홈·가이드·카테고리)
 
 ### 왜 이 순서인가
 목록·상세·카테고리·검색 화면이 모두 같은 Notion 조회 함수와 카드 컴포넌트를 쓴다. 공통부를 먼저 만들면 화면마다 API 호출·매핑 코드가 중복되지 않는다.
@@ -47,11 +47,11 @@
 
 ## Phase 3: 핵심 기능 — 2일
 ### 작업
-- [ ] 홈 `/`: 소개 배너, 최근 가이드 6개, 카테고리 바로가기
-- [ ] 가이드 목록 `/guides`: 최신순 카드 목록, 카테고리 탭
-- [ ] 가이드 상세 `/guides/[slug]`: 메타 정보 + 본문 마크다운 렌더링, 코드 하이라이팅
-- [ ] 카테고리 `/category/[name]`
-- [ ] `not-found`, `error`, `loading` 처리
+- [x] 홈 `/`: 소개 배너, 최근 가이드 6개, 카테고리 바로가기
+- [x] 가이드 목록 `/guides`: 최신순 카드 목록, 카테고리 탭
+- [x] 가이드 상세 `/guides/[slug]`: 메타 정보 + 본문 마크다운 렌더링, 코드 하이라이팅
+- [x] 카테고리 `/category/[name]`
+- [x] `not-found`, `error` 처리 (ISR 페이지라 별도 loading 없이 처리)
 
 ### 왜 이 순서인가
 포탈의 존재 이유인 "가이드를 찾아 읽기"가 가장 중요하다. Phase 2의 공통 모듈 위에 화면만 조립한다.

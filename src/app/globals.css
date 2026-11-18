@@ -71,3 +71,24 @@
     @apply bg-background text-foreground antialiased;
   }
 }
+
+/* 가이드 본문 타이포그래피 */
+@layer components {
+  .prose-guide {
+    @apply space-y-4 leading-7;
+  }
+  .prose-guide h1 { @apply mt-10 text-2xl font-bold; }
+  .prose-guide h2 { @apply mt-10 scroll-mt-20 border-b pb-2 text-xl font-bold; }
+  .prose-guide h3 { @apply mt-8 scroll-mt-20 text-lg font-semibold; }
+  .prose-guide a { @apply text-primary underline underline-offset-4; }
+  .prose-guide ul { @apply list-disc space-y-1 pl-6; }
+  .prose-guide ol { @apply list-decimal space-y-1 pl-6; }
+  .prose-guide blockquote { @apply border-l-4 border-primary/40 pl-4 text-muted-foreground; }
+  .prose-guide :not(pre) > code { @apply rounded bg-muted px-1.5 py-0.5 text-[0.9em]; }
+  .prose-guide pre { @apply overflow-x-auto rounded-lg text-sm; }
+  .prose-guide pre code.hljs { @apply rounded-lg p-4; }
+  .prose-guide table { @apply w-full border-collapse text-sm; }
+  .prose-guide th, .prose-guide td { @apply border px-3 py-2 text-left; }
+  .prose-guide img { @apply rounded-lg border; }
+  .prose-guide hr { @apply my-8; }
+}
